@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="Admingrid_post" disabled="true" resource="default" engine="innodb" comment="Post Table">
+        <column xsi:type="int" name="post_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Post ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Post Name"/>
+        <column xsi:type="varchar" name="url_key" length="255" comment="Post URL Key"/>
+        <column xsi:type="text" name="post_content" comment="Post Content"/>
+        <column xsi:type="varchar" name="tags" comment="Post Tags"/>
+        <column xsi:type="smallint" name="status"  comment="Post Status"/>
+        <column xsi:type="varchar" name="featured_image" length="255" comment="Featured Image"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="post_id"/>
+        </constraint>
+        <index referenceId="POST_NAME_URL_KEY_POST_CONTENT_TAGS_FEATURED_IMAGE" indexType="fulltext">
+            <column name="name"/>
+            <column name="url_key"/>
+            <column name="post_content"/>
+            <column name="tags"/>
+            <column name="featured_image"/>
+        </index>
+    </table>
+</schema>

@@ -1,0 +1,21 @@
+{
+    "Admingrid_post": {
+        "column": {
+            "post_id": true,
+            "name": true,
+            "url_key": true,
+            "post_content": true,
+            "tags": true,
+            "status": true,
+            "featured_image": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "ADMINGRID_POST_NAME_URL_KEY_POST_CONTENT_TAGS_FEATURED_IMAGE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

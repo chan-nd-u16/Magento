@@ -1,0 +1,16 @@
+{
+    "wk_grid_records": {
+        "column": {
+            "entity_id": true,
+            "title": true,
+            "content": true,
+            "publish_date": true,
+            "is_active": true,
+            "created_at": true,
+            "update_time": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

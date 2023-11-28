@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+        <referenceContainer name="main">
+
+            <block cacheable="false"  name="testing"  template="Hvendor_Modulevm::hello.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Hvendor\Modulevm\ViewModel\Customer</argument>
+                </arguments>
+
+            </block>
+        </referenceContainer>
+        <!-- <referenceBlock name="catalog.topnav" template="Magento_Theme::html/topmenu.phtml">
+            <arguments>
+               <argument name="viewModel" xsi:type="object">Hvendor\Magentovm\ViewModel\Customer</argument>
+            </arguments>
+        </referenceBlock>
+
+     -->
+     <!-- <referenceContainer name="sidebar.additional">
+
+            <block  name="testing1"  template="Hvendor_Modulevm::functions.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Hvendor\Modulevm\ViewModel\Customer</argument>
+                </arguments>
+
+            </block>
+        </referenceContainer> -->
+</page>

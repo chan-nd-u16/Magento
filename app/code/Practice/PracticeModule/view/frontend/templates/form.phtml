@@ -1,0 +1,56 @@
+<form action="http://chandru.magento.com/practice/crud/add" method="post">
+
+<div><input type="text" name="name"  placeholder="Enter name" id=""></div>
+
+<div><input type="text" name="age"   placeholder="Enter age" id=""></div>
+
+<div><input type="email" name="mail"  placeholder="Enter mail" id=""></div>
+
+<div><input type="text" name="phone" placeholder="Enter phone" id=""></div>
+
+<div><input type="submit" value="save"></div>
+
+</form>
+
+<?php
+$allCustomers=$block->getViewModel()->giveCollection();
+if(count($allCustomers)>0):
+?>
+<table border="2">
+    <tr>
+
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>mail</th>
+        <th>phone</th>
+        
+    </tr>
+    <?php foreach($allCustomers as $cus):?>
+    <tr>
+        <td><?= $cus->getId(); ?></td>
+        <td><?= $cus->getName(); ?></td>
+        <td><?= $cus->getAge(); ?></td>
+        <td><?= $cus->getMail(); ?></td>
+        <td><?= $cus->getPhone(); ?></td>
+
+
+
+    </tr>
+   
+
+    
+    
+
+
+
+
+
+
+
+    <?php endforeach; ?>
+</table>
+
+<?php else: ?>
+    <h1><?=  __('no customers') ?></h1>
+<?php endif; ?>

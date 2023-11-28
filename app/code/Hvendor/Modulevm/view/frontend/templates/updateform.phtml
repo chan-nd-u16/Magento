@@ -1,0 +1,34 @@
+<?php
+
+// $customerblock=$block->getViewModel()->getCustomer();
+$customerblock=$block->getViewModel()->getCustomer();
+// $block->getViewModel()->getCustomer();
+
+$userId=$block->getRequest()->getParam('id');
+
+$user=$customerblock->addFieldToFilter('id',$userId)->getData()[0];
+?>
+<form method="post" action="http://chandru.magento.com/viewmodule/crud/update">
+   <fieldset>
+    <div>
+            <label for="manufacturer" ><?= __("ID"); ?></label>
+           <input type="text"  value="<?= $user['id']; ?>" name="id" id="manufacturer" />
+      </div>
+       <div>
+            <label for="manufacturer"><?= __("Name"); ?></label>
+           <input type="text" name="name" value="<?= $user['name']; ?>" id="manufacturer" />
+      </div>
+      <div>
+            <label for="manufacturer"><?= __("Email"); ?></label>
+           <input type="text" name="email" value="<?= $user['email']; ?>" id="manufacturer"/>
+      </div>
+       <div>
+            <label for="model"><?= __("Phone Number"); ?></label>
+           <input type="text" value="<?= $user['phone']; ?>" name="phone" id="model" />
+       </div>
+      <input type="submit" value="<?= __("Update Details"); ?>"/>
+   </fieldset>
+</form>
+
+
+

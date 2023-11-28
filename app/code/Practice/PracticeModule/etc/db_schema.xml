@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+<table name="magento_practice">
+<column xsi:type="int" name="id" identity="true" padding="10"/>
+<column xsi:type="varchar" name="name"  length="250"/>
+<column xsi:type="varchar" name="age"   length="250"/>
+<column xsi:type="varchar" name="mail"  length="250"/>
+<column xsi:type="varchar" name="phone" length="250"/>
+
+<constraint xsi:type="primary" referenceId="PRIMARY">
+<column name="id"/>
+</constraint>
+
+</table>
+</schema>

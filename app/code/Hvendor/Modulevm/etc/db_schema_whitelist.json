@@ -1,0 +1,57 @@
+{
+    "customertable_viewmodel": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migration_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migrationtest_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migrationtest1_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "migrationtest2_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

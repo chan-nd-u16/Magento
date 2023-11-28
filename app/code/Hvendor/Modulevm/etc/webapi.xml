@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- test api Group -->
+    <route url="/V1/testapi/custom/me" method="GET">
+        <service class="Hvendor\Modulevm\Api\Data\TestApiInterface" method="getCustomerdetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <!-- <data>
+            <parameter name="id" force="true">%customer_id%</parameter>
+        </data> -->
+    </route>
+
+
+
+    <route url="/V1/testapi/custom/post" method="POST">
+        <service class="Hvendor\Modulevm\Api\Data\TestApiInterface" method="getSpeciticCustomerdetails"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <!-- <data>
+            <parameter name="id" force="true">%customer_id%</parameter>
+        </data> -->
+    </route>
+    <route url="/V1/testapi/custom/del" method="POST">
+        <service class="Hvendor\Modulevm\Api\Data\TestApiInterface" method="deleteCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <!-- <data>
+            <parameter name="id" force="true">%customer_id%</parameter>
+        </data> -->
+    </route>
+    <route url="/V1/testapi/custom/update" method="PUT">
+        <service class="Hvendor\Modulevm\Api\Data\TestApiInterface" method="setCustomer"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+        <!-- <data>
+            <parameter name="id" force="true">%customer_id%</parameter>
+        </data> -->
+    </route>
+</routes>

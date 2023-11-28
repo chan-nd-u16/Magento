@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLScheme-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:view/Layout/etc/page_configuration.xsd">
+
+
+<referenceContainer name="main">
+
+    <block name="form" template="Practice_PracticeModule::form.phtml">
+
+            <arguments>
+                <argument name="view_model" xsi:type="object">Practice\PracticeModule\ViewModel\Customer</argument>
+            </arguments>
+    </block>
+
+</referenceContainer>
+
+
+</page>

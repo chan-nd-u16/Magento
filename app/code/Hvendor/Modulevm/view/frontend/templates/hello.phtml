@@ -1,0 +1,70 @@
+<?php
+
+$cus = $block->getViewModel()->getCustomer();
+// $functions=get_class_methods($block->getViewModel());
+?>
+
+
+<form method="post" action="http://chandru.magento.com/viewmodule/crud/add">
+   <fieldset>
+       <div>
+            <label for="manufacturer"><?= __("Name") ?></label>
+           <input type="text" name="name" id="manufacturer" />
+      </div>
+      <div>
+            <label for="manufacturer"><?= __("Email") ?></label>
+           <input type="text" name="email" id="manufacturer"/>
+      </div>
+       <div>
+            <label for="model"><?= __("Phone Number") ?></label>
+           <input type="text" name="phone" id="model" />
+       </div>
+      <input type="submit" value="<?= __("Add Details") ?>" />
+   </fieldset>
+</form>
+<hr />
+<?php if (count($cus) > 0): ?>
+ <table border="1">
+      <tr>
+         <th><?= __("ID") ?></th>
+          <th><?= __("Name") ?></th>
+            <th><?= __("Email") ?></th>
+            <th><?= __("Phone") ?></th>
+            <th><?= __("Delete") ?></th>
+            <th><?= __("Update") ?></th>
+
+            
+        </tr>
+       <?php foreach ($cus as $customer): ?>
+            <tr>
+               <td><?= $customer->getId() ?></td>
+               <td><?= $customer->getName() ?></td>
+              <td><?= $customer->getEmail() ?></td>
+              <td><?= $customer->getPhone() ?></td>
+              <td>
+              <form method="post" action="http://chandru.magento.com/viewmodule/crud/delete">
+   
+       
+     
+      
+           
+           <input type="text" name="id" value="<?= $customer->getId();?>" style="display:none;" />
+       
+      <input type="submit" value="<?= __("Delete") ?>" />
+   
+</form>
+
+
+
+              </td>
+              <td>
+               
+              <a  href="http://chandru.magento.com/viewmodule/index/updatepage/id/<?= $customer->getId()?>">Edit</a>
+              </td>
+
+           </tr>
+      <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h1><?= __("You have no customers :(") ?></h1>
+<?php endif; ?>

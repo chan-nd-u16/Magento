@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        /* body{
+            background-color: black;
+        } */
+        .fromm{
+            height: 450px;
+            width: 300px;
+            background-color: aquamarine;
+            overflow: scroll;
+        }
+        .to{
+            height: 450px;
+            width: 300px;
+            background-color: aqua;
+            overflow: scroll;
+            /* margin-top: 25px; */
+
+        }
+        .lastt{
+            height: 450px;
+            width: 300px;
+            background-color: aquamarine;
+            overflow: scroll;
+            /* margin-top: 25px; */
+
+        }
+        .parentt{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 5%;
+        }
+        .parentt .fromm .elements{
+            background-color: red;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .parentt .to .elements{
+            background-color: green;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .green{
+            background-color: red;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentt">
+        
+        <div class="fromm">
+            <!-- <div class="elements" draggable="true">Lorem ipsum dolor sit.</div> 
+            <div class="elements" draggable="true">Lorem ipsum dolor sit.</div>
+            <div class="elements" draggable="true">Lorem ipsum dolor sit.</div>      -->
+            <h3 style="text-align: center;">Task</h3>
+        </div>
+        <div class="to">
+            <h3 style="text-align: center;">In progress</h3>
+
+
+        </div>
+        <div class="lastt">
+            <h3 style="text-align: center;">Completed</h3>
+
+
+        </div>
+
+        
+
+    </div>
+    <div style="margin:3% 0 0 30% ;width: fit-content;">
+        <label for="task" style="color: rgb(143, 141, 141);">Enter task to add:</label>
+    <input type="text" name="task"  class="inputtask" id="txt" onchange="add()">
+    <!-- <button >Add</button> -->
+
+    </div>
+    
+</body>
+<script>
+ 
+
+   
+   
+    let from=document.querySelector('.fromm')
+    let to=document.querySelector('.to')
+    let lastt=document.querySelector('.lastt')
+   
+    from.addEventListener('dragover',function(e){
+        e.preventDefault()
+    })
+    from.addEventListener('drop',function(e){
+        ab.style.backgroundColor="red"
+        from.appendChild(ab)
+        ab.querySelector('#icon').classList.value="fa-solid fa-list-check"
+
+
+    })
+
+    to.addEventListener('dragover',function(e){
+        e.preventDefault()
+    })
+    to.addEventListener('drop',function(e){
+        ab.style.backgroundColor="yellow"
+        to.appendChild(ab)
+        document.querySelector('icon')
+        ab.querySelector('#icon').classList.value="fa-solid fa-bars-progress"
+    })
+
+    lastt.addEventListener('dragover',function(e){
+        e.preventDefault()
+    })
+    lastt.addEventListener('drop',function(e){
+        ab.style.backgroundColor="green"
+        lastt.appendChild(ab)
+        ab.querySelector('#icon').classList.value="fa-solid fa-check-to-slot"
+        
+
+    })
+
+
+
+    
+
+
+
+  
+
+    function add(){
+        let task=document.querySelector('#txt').value
+        let elem=document.createElement('div')
+        elem.innerHTML=`<i class="fa-solid fa-list-check" id="icon"></i> ${task}`
+        from.appendChild(elem)
+        elem.setAttribute('draggable','true')
+        elem.classList="green"
+        elem.addEventListener('dragstart',function(e){
+        ab=e.target
+
+        
+        
+    })
+    document.querySelector('#txt').value=" "
+ }
+let ab=''
+
+    
+
+
+
+    
+    
+</script>
+</html>

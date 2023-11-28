@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+
+<acl>
+    <resources>
+        <resource id="Magento_Backend::admin">
+            <resource id="Magento_Backend::content">
+                <resource id="Chandru_Checkcontent::check" title="Chandru content" sortOrder="900">
+
+                        <resource id="Chandru_Checkcontent::faq_save" title="Create" translate="title"/>
+                        <resource id="Chandru_Checkcontent::faq_delete" title="Update" translate="title"/>
+                    <resource id="Chandru_Checkcontent::FAQ" title="FAQ" translate="title"/>
+            
+                     <!-- </resource>    -->
+            
+                </resource>
+            
+            </resource>
+
+        </resource>
+    </resources>
+</acl>
+
+
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Admingrid_Adminmodule::manager"
+        title="Grid Manager" module="Admingrid_Adminmodule"
+        sortOrder="10" resource="Admingrid_Adminmodule::manager" />
+        <add id="Admingrid_Adminmodule::add_row"
+        title="Grid Manager" module="Admingrid_Adminmodule"
+         sortOrder="30" parent="Admingrid_Adminmodule::manager" action="grid/grid"
+        resource="Admingrid_Adminmodule::add_row"/>
+    </menu>
+</config>

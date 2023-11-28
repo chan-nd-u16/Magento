@@ -1,0 +1,13 @@
+{
+    "display_table": {
+        "column": {
+            "id": true,
+            "name": true,
+            "email": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

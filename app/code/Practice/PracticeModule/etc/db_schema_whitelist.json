@@ -1,0 +1,14 @@
+{
+    "magento_practice": {
+        "column": {
+            "id": true,
+            "name": true,
+            "age": true,
+            "mail": true,
+            "phone": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

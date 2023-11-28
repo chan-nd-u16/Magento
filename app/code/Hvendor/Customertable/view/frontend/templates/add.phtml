@@ -1,0 +1,45 @@
+<?php
+/** @var Hvendor\Customertable\Block\Add $block */
+
+$cusblock=$block->getAllCustomers();
+
+?>
+<form method="post" action="<?= $block->getAddCustomerUrl() ?>">
+   <fieldset>
+       <div>
+            <label for="manufacturer"><?= __("Name") ?></label>
+           <input type="text" name="name" id="manufacturer" />
+      </div>
+      <div>
+            <label for="manufacturer"><?= __("Email") ?></label>
+           <input type="text" name="email" id="manufacturer"/>
+      </div>
+       <div>
+            <label for="model"><?= __("Phone Number") ?></label>
+           <input type="text" name="phone" id="model" />
+       </div>
+      <input type="submit" value="<?= __("Add Details") ?>" />
+   </fieldset>
+</form>
+<hr />
+<?php if (count($cusblock) > 0): ?>
+ <table border="1">
+      <tr>
+         <th><?= __("ID") ?></th>
+          <th><?= __("Name") ?></th>
+            <th><?= __("Email") ?></th>
+            <th><?= __("Phone") ?></th>
+        </tr>
+       <?php foreach ($cusblock as $cus): ?>
+            <tr>
+               <td><?= $cus->getId() ?></td>
+               <td><?= $cus->getName() ?></td>
+              <td><?= $cus->getEmail() ?></td>
+              <td><?= $cus->getPhone() ?></td>
+
+           </tr>
+      <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h1><?= __("You have no customer yet :(") ?></h1>
+<?php endif; ?>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Hvendor\Modulevm\Api\Data\TestApiInterface" type="Hvendor\Modulevm\Model\TestApi"/>
+    <!-- <preference for="Magento\Catalog\Model\Product" type="Hvendor\Modulevm\Model\Product"/>
+    <type type="Magento\Quote\Model\Quote">
+        <plugin name="before_quote"  type="Hvendor\Modulevm\Plugin\Quote" sortOrder="1"/>
+    </type> -->
+    <!-- <preference for="Magento\Catalog\Model\product" type="Hvendor\Modulevm\Model\Product"/> -->
+</config>

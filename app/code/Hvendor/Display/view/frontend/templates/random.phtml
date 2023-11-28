@@ -1,0 +1,20 @@
+<div id="chan" style="height: 100px;width:100px;"></div>
+<button onclick="ran()">click</button>
+<script>
+
+let arr=['A','B','C','D','E','F',0,1,2,3,4,5,6,7,8,9]
+let bl=""
+function ran(){
+    for(i=0;i<6;i++){
+
+        bl+=arr[Math.floor(Math.random()*15)]
+    }
+    let box=document.querySelector('#chan')
+    box.style.backgroundColor="#"+bl
+    // document.body.style.backgroundColor="#"+bl
+    bl=""
+
+}
+
+
+</script>

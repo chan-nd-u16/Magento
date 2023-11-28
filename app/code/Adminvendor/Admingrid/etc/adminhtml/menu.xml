@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLShema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+
+<menu>
+
+        <add id="Adminvendor_Admingrid::helloworld" title="FAQ" module="Adminvendor_Admingrid" sortOrder="51" resource="Adminvendor_Admingrid::helloworld"/>
+
+
+        <add id="Adminvendor_Admingrid::post" title="VIEW_FAQ" module="Adminvendor_Admingrid" sortOrder="10" action="Adminfaq/post/index1" resource="Adminvendor_Admingrid::faq" parent="Adminvendor_Admingrid::helloworld"/>
+        <!-- <add id="Adminvendor_Admingrid::hello_configuration" title="Configuration" module="Mageplaza_HelloWorld" sortOrder="99" parent="Mageplaza_HelloWorld::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Mageplaza_HelloWorld::helloworld_configuration"/> -->
+   
+
+
+</menu>
+
+</config>
